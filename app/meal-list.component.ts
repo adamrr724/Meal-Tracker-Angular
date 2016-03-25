@@ -15,6 +15,7 @@ import { HealthPipe } from './health.pipe';
   template: `
   <div class="container">
     <div class="row col-xs-6">
+      <label>Filter Results:</label>
       <select (change)="onChange($event.target.value)" class="filter">
         <option value="all" selected="selected">Show All</option>
         <option value="healthy">Show Healthy</option>
@@ -26,7 +27,7 @@ import { HealthPipe } from './health.pipe';
       [meal]="currentMeal">
       </meal-display>
     </div>
-    <div class="row col-xs-6">
+    <div class="details row col-xs-6">
       <show-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
       </show-meal-details>
       <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">

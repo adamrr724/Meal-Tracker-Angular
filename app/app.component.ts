@@ -6,8 +6,10 @@ import { Meal } from './meal.model';
   selector: 'my-app',
   directives: [MealListComponent],
   template: `
-    <div class="container">
+    <div class="jumbotron">
       <h1>Meal Tracker</h1>
+    </div>
+      <div class="container">
       <meal-list
         [mealList]="meals"
         (onMealSelect)="mealWasSelected($event)">
@@ -21,9 +23,9 @@ export class AppComponent {
   constructor(){
     this.meals = [
       new Meal("Cheeseburger", "Low Fat!", 435),
-      new Meal("Pizza", "Healthiest Pizza Ever", 543),
+      new Meal("Pizza", "Healthiest Pizza Ever!", 543),
       new Meal("Ice Cream", "This diet's going great!", 345),
-      new Meal("Lard", "I have digressed.", 856)
+      new Meal("Lard", "I admit... I may have digressed.", 856)
     ];
   }
   mealWasSelected(clickedMeal: Meal): void {

@@ -7,3 +7,21 @@
   display: block;
   float:left;
 }
+
+.jumbotron {
+  text-align: center;
+}
+
+.filter {
+  margin-bottom: 10px;
+}
+
+.details {
+  text-align: center;
+}
+
+.meal-form {
+  display:inline-block;
+  margin: 0 auto;
+  float: none;
+}
