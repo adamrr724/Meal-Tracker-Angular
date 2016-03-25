@@ -6,7 +6,9 @@ import { Meal } from './meal.model';
   template: `
     <div class="container">
       <h1>Meal Tracker</h1>
-      <meal-list>
+      <meal-list
+        [mealList]="meals"
+        (onMealSelect)="mealWasSelected($event)">
       </meal-list>
     <div>
   `
@@ -21,5 +23,7 @@ export class AppComponent {
       new Meal("Ice Cream", "This diet's going great!", 345),
       new Meal("Lard", "I have digressed.", 856)
     ];
+  }
+  mealWasSelected(clickedMeal: Meal): void {
   }
 }
