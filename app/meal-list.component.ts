@@ -1,12 +1,14 @@
 import { Component, EventEmitter } from 'angular2/core';
+import { MealComponent } from './meal.component';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'meal-list',
   inputs: ['mealList'],
-  outputs: ['onTaskSelect'],
+  outputs: ['onMealSelect'],
+  directives: [MealComponent],
   template: `
-  <meal-display *ngFor="currentMeal of mealList"
+  <meal-display *ngFor="#currentMeal of mealList"
   (click)="mealClicked(currentMeal)"
   [class.selected]="currentMeal === selectedMeal"
   [meal]="currentMeal">
@@ -18,11 +20,11 @@ export class MealListComponent {
   public mealList: Meal[];
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
-  constructor() {
-    this.onTaskSelect = new EventEmitter();
-  }
+    constructor() {
+      this.onMealSelect = new EventEmitter();
+    }
   mealClicked(clickedMeal: Meal): void {
   this.selectedMeal = clickedMeal;
   this.onMealSelect.emit(clickedMeal);
-}
+  }
 }

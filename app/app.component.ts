@@ -12,7 +12,7 @@ import { Meal } from './meal.model';
         [mealList]="meals"
         (onMealSelect)="mealWasSelected($event)">
       </meal-list>
-    <div>
+    </div>
   `
 })
 
@@ -25,6 +25,8 @@ export class AppComponent {
       new Meal("Ice Cream", "This diet's going great!", 345),
       new Meal("Lard", "I have digressed.", 856)
     ];
+
+    console.log(this.meals);
   }
   mealWasSelected(clickedMeal: Meal): void {
   }

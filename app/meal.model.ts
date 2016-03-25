@@ -5,5 +5,5 @@ export class Meal {
     public calories: number
   ) {
 
-    }
+  }
 }
