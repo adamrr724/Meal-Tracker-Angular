@@ -2,3 +2,8 @@
 .selected {
   color:green;
 }
+
+.addnew {
+  display: block;
+  float:left;
+}
