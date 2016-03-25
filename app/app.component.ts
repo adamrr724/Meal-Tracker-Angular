@@ -1,8 +1,10 @@
 import { Component, EventEmitter } from 'angular2/core';
+import { MealListComponent } from './meal-list.component';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
+  directives: [MealListComponent],
   template: `
     <div class="container">
       <h1>Meal Tracker</h1>
