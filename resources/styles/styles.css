@@ -1,4 +1,8 @@
 
+body {
+  background-image: url("/resources/images/concrete_seamless.png");
+}
+
 .selected {
   color:green;
 }
@@ -10,7 +14,13 @@
 
 .jumbotron {
   text-align: center;
-  background-color: #7D9EC0;
+  background-image: url("/resources/images/food.jpg");
+  background-size: auto;
+  background-position: bottom;
+  padding-top: 1em;
+  padding-bottom: 30em;
+  text-shadow: 1px .5px 1px white;
+
 }
 
 .filter {
@@ -19,7 +29,6 @@
 
 .details {
   text-align: center;
-  background-color: #CDC9C9;
 }
 
 .meal-form {
@@ -27,4 +36,10 @@
   margin: 0 auto;
   float: none;
   margin-bottom: 25px;
+  color: #CD3333;
+}
+
+.btn-success {
+  display: inline-block;
+  float: left;
 }
