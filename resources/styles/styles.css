@@ -10,6 +10,7 @@
 
 .jumbotron {
   text-align: center;
+  background-color: #7D9EC0;
 }
 
 .filter {
@@ -18,10 +19,12 @@
 
 .details {
   text-align: center;
+  background-color: #CDC9C9;
 }
 
 .meal-form {
   display:inline-block;
   margin: 0 auto;
   float: none;
+  margin-bottom: 25px;
 }
